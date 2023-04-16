@@ -24,13 +24,12 @@ def get_occurrences(pattern, text):
     t_hash = calculate_hash(text[:p_len])
     for i in range(t_len - p_len + 1):
         if p_hash == t_hash and text[i:i+p_len] == pattern:
-            occurances.append(i)
+            occurrences.append(i)
         if i < t_len - p_len:
             t_hash = (t_hash * prime - ord(text[i])*(prime ** p_len) + ord(text[i+p_len])) % t_len
     return occurrences
 
 
-# this part launches the functions
 if __name__ == '__main__':
-    print_occurrences(get_occurrences(*read_input()))
+    print_occurrences(occurrences(*read_input()))
 
