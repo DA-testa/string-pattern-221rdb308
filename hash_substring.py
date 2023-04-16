@@ -15,7 +15,7 @@ def get_occurrences(pattern, text):
     t_len = len(text)
     prime = 101
     
-    def calculate_hash(l)
+    def calculate_hash(l):
         h = 0
         for i in range(len(l)):
             h = (h * prime + ord(l[i])) % t_len
