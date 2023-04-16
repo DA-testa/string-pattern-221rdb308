@@ -2,10 +2,13 @@
 
 def read_input():
     input_type = input().rstrip()
-    pattern = input().rstrip()
-    text = input().rstrip()
-    if input_type == 'F':
-        with open(pattern, 'r') as file:
+    if input_type == 'I':
+       pattern = input().rstrip()
+       text = input().rstrip()
+    else:
+        filename = '06'
+        folder = './tests/'
+        with open(folder + filename, 'r') as file:
             pattern = file.readline().rstrip()
             text = file.readline().rstrip()
     return (pattern, text)
