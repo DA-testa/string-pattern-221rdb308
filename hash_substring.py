@@ -4,7 +4,7 @@ def read_input():
     input_type = input().rstrip()
     pattern = input().rstrip()
     text = input().rstrip()
-    return (input().rstrip(), input().rstrip())
+    return (pattern, text)
 
 def print_occurrences(output):
     print(' '.join(map(str, output)))
